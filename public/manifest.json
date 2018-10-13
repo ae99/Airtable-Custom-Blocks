@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Airtable Custom Blocks",
+    "description": "Allows you to create custom blocks in airtable.",
+    "version": "0.0.1",
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'",
+
+    "browser_action": {
+      "default_popup": "./index.html",
+      "default_title": "Open the popup"
+    },
+    "icons": {
+      "16": "logo-small.png",
+      "48": "logo-small.png",
+      "128": "logo-small.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://www.google.com/*"],
+        "html": "./index.html",
+        "all_frames": true
+      }
+    ],
+    "permissions": [
+    ]
+  }
